@@ -33,7 +33,7 @@ const Home = () => {
         />
       </section>
       <section className="my-container">
-        <div className="text-center">
+        <div className="text-center mb-2">
           <h1 className="font-extrabold text-3xl lg:text-5xl mb-2">
             Job Category List
           </h1>
