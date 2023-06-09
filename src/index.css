@@ -14,11 +14,11 @@
 }
 
 .btn-primary {
-  @apply font-bold text-white transition-all duration-200 shadow-md  px-4 py-2 md:px-7 md:py-5 text-lg rounded border-transparent bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:shadow-lg hover:bg-slate-100;
+  @apply font-bold text-white transition-all duration-200 shadow-md  px-2 py-1 md:px-3 md:py-4 text-lg rounded border-transparent bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:shadow-lg hover:bg-slate-100;
 }
 
-.btn-outlined {
-  @apply font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded  text-gray-700 hover:bg-cyan-400 hover:border-transparent border-2 border-cyan-200;
+.btn-secondary {
+  @apply font-bold  transition duration-200  shadow-md  md:mb-0  px-2 py-1 text-lg rounded  text-white bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-cyan-400;
 }
 
 .active {

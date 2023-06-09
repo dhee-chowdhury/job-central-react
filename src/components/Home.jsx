@@ -43,7 +43,7 @@ const Home = () => {
             need. Its your future
           </p>
         </div>
-        <div className="text-center md:text-start md:flex items-start justify-between">
+        <div className="md:flex items-start justify-between">
           {jobCategory.map((category) => (
             <Category key={category._id} category={category}></Category>
           ))}
