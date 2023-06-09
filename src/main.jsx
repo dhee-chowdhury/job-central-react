@@ -5,6 +5,8 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import { categoryAndJobs } from "./components/loaders/categoryAndJobs.js";
+import ViewDetails from "./components/ViewDetails.jsx";
+import { jobDetails } from "./components/loaders/jobDetails.js";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: categoryAndJobs,
+      },
+      {
+        path: "/:jobId",
+        element: <ViewDetails></ViewDetails>,
+        loader: async ({ params }) => jobDetails(params.jobId),
       },
     ],
   },

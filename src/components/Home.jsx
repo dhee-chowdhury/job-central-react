@@ -5,7 +5,6 @@ import Job from "./Cards/Job";
 
 const Home = () => {
   const { jobCategory, jobs } = useLoaderData();
-  console.log(jobCategory, jobs);
   return (
     <div>
       <section className="my-container md:flex items-center justify-between">

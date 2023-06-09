@@ -23,12 +23,12 @@ const Job = ({ job }) => {
       <p className="text-lg text-gray-600 font-semibold mb-2">{company_name}</p>
       <div className="inline-flex gap-2 mb-2">
         <div className="p-[1px] bg-gradient-to-r from-[#7E90FE] to-[#9873FF] rounded">
-          <div className="bg-white rounded p-2 shadow-sm">
+          <div className="bg-white rounded px-4 py-2 shadow-sm">
             <p className="title-text">{job_location}</p>
           </div>
         </div>
         <div className="p-[1px] bg-gradient-to-r from-[#7E90FE] to-[#9873FF] rounded">
-          <div className="bg-white rounded p-2 shadow-sm">
+          <div className="bg-white rounded px-4 py-2 shadow-sm">
             <p className="title-text">{job_type}</p>
           </div>
         </div>
