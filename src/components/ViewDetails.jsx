@@ -17,26 +17,27 @@ const ViewDetails = () => {
   console.log(job);
   return (
     <div className="my-container">
-      <div>
+      <div className="flex flex-col gap-4">
         <p>
           <span className="font-extrabold">Job Description: </span>
-          <span className="text-gray-700 text-lg">{job_description}</span>
+          <span className="text-gray-600 text-lg">{job_description}</span>
         </p>
         <p>
           <span className="font-extrabold">Job Responsibility: </span>
-          <span className="text-gray-700 text-lg">{job_responsibility}</span>
+          <span className="text-gray-600 text-lg">{job_responsibility}</span>
         </p>
         <p>
           <span className="font-extrabold">Educational Requirement: </span>
-          <span className="text-gray-700 text-lg">{education_requirement}</span>
+          <span className="text-gray-600 text-lg">{education_requirement}</span>
         </p>
         <p>
           <span className="font-extrabold">Experience: </span>
-          <span className="text-gray-700 text-lg">
+          <span className="text-gray-600 text-lg">
             {experience} in this field
           </span>
         </p>
       </div>
+      <div></div>
     </div>
   );
 };
