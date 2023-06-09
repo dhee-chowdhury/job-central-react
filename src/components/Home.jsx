@@ -1,10 +1,11 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Category from "./Cards/Category";
+import Job from "./Cards/Job";
 
 const Home = () => {
-  const jobCategory = useLoaderData();
-  console.log(jobCategory);
+  const { jobCategory, jobs } = useLoaderData();
+  console.log(jobCategory, jobs);
   return (
     <div>
       <section className="my-container md:flex items-center justify-between">
@@ -45,6 +46,22 @@ const Home = () => {
         <div className="text-center md:text-start md:flex items-start justify-between">
           {jobCategory.map((category) => (
             <Category key={category._id} category={category}></Category>
+          ))}
+        </div>
+      </section>
+      <section className="my-container">
+        <div className="text-center mb-8">
+          <h1 className="font-extrabold text-3xl lg:text-5xl mb-2">
+            Featured Jobs
+          </h1>
+          <p className="text-gray-700 text-lg">
+            Explore thousands of job opportunities with all the information you
+            need. Its your future
+          </p>
+        </div>
+        <div className="jobs-container">
+          {jobs.map((job) => (
+            <Job key={job._id} job={job}></Job>
           ))}
         </div>
       </section>

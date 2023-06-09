@@ -38,7 +38,7 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
-        <Link>
+        <Link to="/">
           <button className="btn-primary">Start applying</button>
         </Link>
       </div>
