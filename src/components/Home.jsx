@@ -14,11 +14,9 @@ const Home = () => {
             to the Job of <br />
             <span className="title-text">Your Dreams</span>
           </h1>
-          <p className="text-lg text-gray-700 mb-2">
+          <p className="text-lg text-gray-700 mb-2 md:w-3/4">
             Discover a vast array of career possibilities, spanning numerous
-            <br />
             industries and roles, accompanied by insights. Unleash the potential
-            <br />
             of your future and embark on a journey to secure your dream job.
           </p>
 
