@@ -16,7 +16,11 @@ const Job = ({ job }) => {
   } = job;
   return (
     <div className="rounded-lg border border-gray-100 p-2 lg:p-10 shadow-md mb-4 lg:mb-0 flex flex-col justify-between">
-      <img className="w-16 h-12object-contain mb-2" src={company_logo} alt="" />
+      <img
+        className="w-16 h-12 object-contain mb-2"
+        src={company_logo}
+        alt=""
+      />
       <h1 className="text-2xl text-gray-700 font-extrabold mb-2">
         {job_title}
       </h1>

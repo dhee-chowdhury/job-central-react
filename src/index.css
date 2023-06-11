@@ -20,6 +20,9 @@
 .btn-secondary {
   @apply font-bold  transition duration-200 shadow-md  md:mb-0  px-2 py-1 text-lg rounded  text-white bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-cyan-400;
 }
+.btn-outlined {
+  @apply font-bold  transition duration-200 border border-purple-500 hover:shadow-md  md:mb-0  px-2 py-1 text-lg rounded-md;
+}
 
 .active {
   @apply font-medium tracking-wide text-purple-600 transition-colors duration-200;

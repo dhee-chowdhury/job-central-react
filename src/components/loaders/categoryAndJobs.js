@@ -7,7 +7,14 @@ export const categoryAndJobs = async () => {
   const jobsData = await fetch("jobs.json");
   const allJobs = await jobsData.json();
 
-  const savedJobs = getStoredJobs();
+  const storedJobs = getStoredJobs();
+  const savedJobs = [];
+  for (const id of storedJobs) {
+    const foundJob = allJobs.find((job) => job._id === id);
+    if (foundJob) {
+      savedJobs.push(foundJob);
+    }
+  }
 
   return { jobCategory, allJobs, savedJobs };
 };
