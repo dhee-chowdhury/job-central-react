@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Category from "./Cards/Category";
 import Job from "./Cards/Job";
 import { CategoryContext, JobsContext } from "../App";

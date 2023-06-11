@@ -9,11 +9,14 @@ import ViewDetails from "./components/ViewDetails.jsx";
 import { jobDetails } from "./components/loaders/jobDetails.js";
 import { Toaster } from "react-hot-toast";
 import AppliedJobs from "./components/AppliedJobs.jsx";
+import Statistics from "./components/Statistics.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     loader: categoryAndJobs,
     children: [
       {
@@ -28,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/appliedJobs",
         element: <AppliedJobs></AppliedJobs>,
+      },
+      {
+        path: "/statistics",
+        element: <Statistics></Statistics>,
       },
     ],
   },
