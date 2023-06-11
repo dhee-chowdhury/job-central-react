@@ -7,9 +7,11 @@ import {
   PhoneIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
+import { addToDb } from "../utils/fakeDB";
 const ViewDetails = () => {
   const job = useLoaderData();
   const {
+    _id,
     job_title,
     job_description,
     job_responsibility,
@@ -21,6 +23,10 @@ const ViewDetails = () => {
     education_requirement,
   } = job;
   console.log(job);
+
+  const handleAddToDb = (id) => {
+    addToDb(id);
+  };
   return (
     <div className="my-container lg:flex gap-4">
       <div className="flex flex-col gap-4 lg:w-2/3 mb-4 lg:mb-0">
@@ -101,7 +107,7 @@ const ViewDetails = () => {
             <MapPinIcon className="h-6 w-6 text-purple-500"></MapPinIcon>
             <p>
               <span className="text-gray-700 font-bold text-base lg:text-lg">
-                Address:
+                Address:{" "}
               </span>
               <span className="font-medium text-gray-600 text-base">
                 {address}
@@ -111,7 +117,12 @@ const ViewDetails = () => {
         </div>
 
         <Link>
-          <button className="btn-primary w-full">Apply now</button>
+          <button
+            onClick={() => handleAddToDb(_id)}
+            className="btn-primary w-full"
+          >
+            Apply now
+          </button>
         </Link>
       </div>
     </div>

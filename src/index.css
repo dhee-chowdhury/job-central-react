@@ -14,19 +14,19 @@
 }
 
 .btn-primary {
-  @apply font-bold text-white transition-all duration-200 shadow-md  px-2 py-1 md:px-4 md:py-3 text-lg rounded border-transparent bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:shadow-lg hover:bg-slate-100;
+  @apply font-bold text-white transition duration-500 shadow-md  px-2 py-1 md:px-4 md:py-3 text-lg rounded border-transparent bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:shadow-lg hover:to-purple-500 hover:from-purple-500;
 }
 
 .btn-secondary {
-  @apply font-bold  transition duration-200  shadow-md  md:mb-0  px-2 py-1 text-lg rounded  text-white bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-cyan-400;
+  @apply font-bold  transition duration-200 shadow-md  md:mb-0  px-2 py-1 text-lg rounded  text-white bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-cyan-400;
 }
 
 .active {
-  @apply font-medium tracking-wide text-cyan-600 transition-colors duration-200;
+  @apply font-medium tracking-wide text-purple-600 transition-colors duration-200;
 }
 
 .default {
-  @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-cyan-600;
+  @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-[#9873FF];
 }
 @layer utilities {
   .title-text {
