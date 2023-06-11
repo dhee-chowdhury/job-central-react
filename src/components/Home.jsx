@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Category from "./Cards/Category";
 import Job from "./Cards/Job";
+import { CategoryContext, JobsContext } from "../App";
 
 const Home = () => {
-  const { jobCategory, jobs } = useLoaderData();
+  // const { jobCategory, jobs } = useLoaderData();
+  const jobCategory = useContext(CategoryContext);
+  const [jobs, setJobs] = useContext(JobsContext);
   return (
     <div>
       <section className="my-container md:flex items-center justify-between">

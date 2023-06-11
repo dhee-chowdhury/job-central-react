@@ -3,7 +3,7 @@ export const categoryAndJobs = async () => {
   const jobCategory = await categoryData.json();
 
   const jobsData = await fetch("jobs.json");
-  const jobs = await jobsData.json();
+  const initialJobs = await jobsData.json();
 
-  return { jobCategory, jobs };
+  return { jobCategory, initialJobs };
 };

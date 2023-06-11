@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { toast } from "react-hot-toast";
 import {
   MapPinIcon,
   CurrencyDollarIcon,
@@ -7,7 +8,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
-import { addToDb } from "../utils/fakeDB";
+import { addToDb, getStoredJobs } from "../utils/fakeDB";
 const ViewDetails = () => {
   const job = useLoaderData();
   const {
@@ -22,11 +23,18 @@ const ViewDetails = () => {
     address,
     education_requirement,
   } = job;
-  console.log(job);
 
+  // Adding items to local storage
   const handleAddToDb = (id) => {
-    addToDb(id);
+    const appliedJobs = getStoredJobs();
+    if (appliedJobs.includes(id)) {
+      toast.error("You have already applied for this job");
+    } else {
+      toast.success("applied");
+      addToDb(id);
+    }
   };
+
   return (
     <div className="my-container lg:flex gap-4">
       <div className="flex flex-col gap-4 lg:w-2/3 mb-4 lg:mb-0">

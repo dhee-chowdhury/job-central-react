@@ -14,13 +14,13 @@ const addToDb = (id) => {
   localStorage.setItem("applied-jobs", JSON.stringify(appliedJobs));
 };
 
-const getStoredCart = () => {
-  let shoppingCart = {};
-  const storedCart = localStorage.getItem("shopping-cart");
-  if (storedCart) {
-    shoppingCart = JSON.parse(storedCart);
+const getStoredJobs = () => {
+  let appliedJobs = [];
+  const storedJobs = localStorage.getItem("applied-jobs");
+  if (storedJobs) {
+    appliedJobs = JSON.parse(storedJobs);
   }
-  return shoppingCart;
+  return appliedJobs;
 };
 
 const removeFromDb = (id) => {
@@ -40,7 +40,7 @@ const deleteShoppingCart = () => {
 
 export {
   addToDb,
-  getStoredCart,
+  getStoredJobs,
   removeFromDb,
   deleteShoppingCart as clearCart,
 };
