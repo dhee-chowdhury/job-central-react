@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Category from "./Cards/Category";
 import Job from "./Cards/Job";
@@ -7,7 +7,13 @@ import { CategoryContext, JobsContext } from "../App";
 const Home = () => {
   // const { jobCategory, jobs } = useLoaderData();
   const jobCategory = useContext(CategoryContext);
-  const [jobs, setJobs] = useContext(JobsContext);
+  const allJobs = useContext(JobsContext);
+  const [jobs, setJobs] = useState(allJobs.slice(0, 4));
+
+  const handleShowAllJobs = () => {
+    setJobs(allJobs);
+    // setJobs(jobsData);
+  };
   return (
     <div>
       <section className="my-container md:flex items-center justify-between">
@@ -63,6 +69,13 @@ const Home = () => {
           {jobs.map((job) => (
             <Job key={job._id} job={job}></Job>
           ))}
+        </div>
+        <div className="flex justify-center">
+          {jobs.length === 4 && (
+            <button onClick={handleShowAllJobs} className="btn-primary">
+              Show all jobs
+            </button>
+          )}
         </div>
       </section>
     </div>

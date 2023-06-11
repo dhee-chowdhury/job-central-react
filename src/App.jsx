@@ -7,15 +7,17 @@ export const CategoryContext = createContext([]);
 export const AppliedJobsContext = createContext([]);
 
 const App = () => {
-  const { jobCategory, initialJobs } = useLoaderData();
-  const [jobs, setJobs] = useState(initialJobs.slice(0, 4));
+  const { jobCategory, allJobs, savedJobs } = useLoaderData();
+  // const [jobs, setJobs] = useState(allJobs.slice(0, 4));
   return (
-    <JobsContext.Provider value={[jobs, setJobs]}>
-      <CategoryContext.Provider value={jobCategory}>
-        <Header></Header>
-        <Outlet></Outlet>
-      </CategoryContext.Provider>
-    </JobsContext.Provider>
+    <AppliedJobsContext.Provider value={savedJobs}>
+      <JobsContext.Provider value={allJobs}>
+        <CategoryContext.Provider value={jobCategory}>
+          <Header></Header>
+          <Outlet></Outlet>
+        </CategoryContext.Provider>
+      </JobsContext.Provider>
+    </AppliedJobsContext.Provider>
   );
 };
 

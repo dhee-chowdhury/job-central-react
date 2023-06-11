@@ -8,6 +8,7 @@ import { categoryAndJobs } from "./components/loaders/categoryAndJobs.js";
 import ViewDetails from "./components/ViewDetails.jsx";
 import { jobDetails } from "./components/loaders/jobDetails.js";
 import { Toaster } from "react-hot-toast";
+import AppliedJobs from "./components/AppliedJobs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/appliedJobs",
-        element: <h1>hello from applied jobs</h1>,
+        element: <AppliedJobs></AppliedJobs>,
       },
     ],
   },
