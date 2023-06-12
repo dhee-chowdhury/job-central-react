@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Category from "./Cards/Category";
 import Job from "./Cards/Job";
 import { CategoryContext, JobsContext } from "../App";
+import person from "../assets/professional_3.png";
 
 const Home = () => {
   // const { jobCategory, jobs } = useLoaderData();
@@ -35,7 +36,7 @@ const Home = () => {
         </div>
         <img
           className="object-cover mx-auto md:mx-0"
-          src="/src/assets/professional_3.png"
+          src={person}
           alt="professional"
         />
       </section>
