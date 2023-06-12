@@ -7,7 +7,6 @@ import { toast } from "react-hot-toast";
 
 const AppliedJobs = () => {
   const savedJobs = useContext(AppliedJobsContext || []);
-  console.log(savedJobs);
   const [appliedJobs, setAppliedJobs] = useState(savedJobs);
 
   //showing all the jobs from local storage/db
